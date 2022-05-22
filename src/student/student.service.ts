@@ -14,10 +14,10 @@ export class StudentService {
   async createStudent(
     createStudentInput: CreateStudentInput,
   ): Promise<Student> {
-    const { name, lastname } = createStudentInput;
+    const { firstname, lastname } = createStudentInput;
     const student = this.studentRepository.create({
       id: uuid(),
-      name,
+      firstname,
       lastname,
     });
     return this.studentRepository.save(student);

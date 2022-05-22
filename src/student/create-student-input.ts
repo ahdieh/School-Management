@@ -5,7 +5,7 @@ import { MinLength } from 'class-validator';
 export class CreateStudentInput {
   @MinLength(1)
   @Field()
-  name: string;
+  firstname: string;
 
   @MinLength(1)
   @Field()
